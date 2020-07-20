@@ -6,8 +6,8 @@ export const UserSchema = new mongoose.Schema({
 });
 ​
 export interface Users {
-    fname: String;
-    Lname: String
+    firstname: String;
+    lastname: String
     email: String;
     password: String;
 }
