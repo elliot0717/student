@@ -21,7 +21,7 @@ export class AdminLoginComponent implements OnInit {
         this.user[i].password === password
       ) {
         alert("Successfully logged in");
-        this.router.navigate(["admin-add"]);
+        this.router.navigate(["admin"]);
         return;
       }
     }

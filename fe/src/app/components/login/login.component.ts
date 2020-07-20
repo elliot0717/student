@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
           this.user[i].password === password
         ) {
           alert("Successfully logged in")
-          //this.router.navigate(["home-component"]);
+          this.router.navigate(["universities"]);
           return;
         }
       }
