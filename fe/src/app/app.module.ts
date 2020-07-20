@@ -12,6 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TestComponent } from './components/test/test.component';
 import { AdminComponent } from './admin/admin.component';
+import { UniversitiesComponent } from './universities/universities.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AdminComponent } from './admin/admin.component';
     HomeComponent,
     NavbarComponent,
     TestComponent,
-    AdminComponent
+    AdminComponent,
+    UniversitiesComponent
   ],
   imports: [
     BrowserModule,
