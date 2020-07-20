@@ -5,7 +5,6 @@ import { Users } from './users.model';
 ​
 @Injectable()
 export class UsersService {
-  private users: Users[] = [];
 ​
   constructor(@InjectModel('User') private readonly loginModel: Model<Users>) { }
 ​
