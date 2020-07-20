@@ -1,0 +1,31 @@
+<br><br><br><br><br>
+<div class="container">
+<!-- login -->
+<form class="text-center border border-light p-5" action="#!">
+
+    <p class="h4 mb-4">User Sign in</p>
+    
+   
+    <!--Enter Email -->
+    <input type="text" name="email" class="form-control mb-4" placeholder="username"  
+   [(ngModel)]= "username">
+     
+  
+    <!-- Enter Password -->
+    <input type="password" name="password" class="form-control mb-4" placeholder="Password"
+    [(ngModel)]="password">
+  
+  
+    <!-- Sign in button -->
+   <button class="btn btn-dark blue-grey btn-block my-4" type="submit" (click)= "login(username, password)">Sign in</button>
+
+   <!-- Default switch -->
+<!-- <div class="custom-control custom-switch" is-disabled="false">
+    <input type="checkbox" class="custom-control-input" id="customSwitches">
+    <label class="custom-control-label" for="customSwitches">If your an Admin click Switch ON</label>
+  </div> -->
+  
+  </form>
+  
+  <!-- login -->
+</div>

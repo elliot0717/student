@@ -7,9 +7,9 @@
     <!-- Collapsible content -->
     <links>
         <!-- Links -->
-        <ul class="navbar-nav mr-auto">
-            <!-- Dropdown -->
-            <li class="nav-item dropdown" dropdown>
+         <ul class="navbar-nav mr-auto"> 
+             <!-- Dropdown -->
+          <!-- <li class="nav-item dropdown" dropdown>
                 <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light"
                     mdbWavesEffect>
                     dropdown demo <span class="caret"></span></a>
@@ -20,44 +20,55 @@
                     <div class="divider dropdown-divider"></div>
                     <a class="dropdown-item waves-light" mdbWavesEffect>Separated link</a>
                 </div>
-            </li>
-        </ul>
+            </li> -->
+        </ul> 
         <!-- Links -->
 
         <ul class="navbar-nav ml-auto nav-flex-icons">
-            <li class="nav-item" routerLinkActive="active">
+             <!-- <li class="nav-item" routerLinkActive="active">
                 <a class="nav-link waves-light" routerLink="/home" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item" routerLinkActive="active">
+            </li> -->
+            <!-- <li class="nav-item" routerLinkActive="active">
                 <a class="nav-link waves-light" routerLink="/test" mdbWavesEffect>Test</a>
-            </li>
-            <li class="nav-item">
+            </li>  -->
+             <!-- <li class="nav-item">
                 <a class="nav-link" target="blank" href="https://twitter.com/dylut2000?lang=en">
                     <mdb-icon fab icon="twitter"></mdb-icon>
                 </a>
-            </li>
-            <li class="nav-item">
+            </li> -->
+            <!-- <li class="nav-item">
                 <a class="nav-link" target="blank" href="https://github.com/dylut2000">
                     <mdb-icon fab icon="github"></mdb-icon>
                 </a>
+            </li>  -->
+        <ul class="navbar-nav mr-auto">
+           
+        </ul>
+        <!-- Links -->
+
+        <!-- <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link waves-light" routerLink="/test" mdbWavesEffect>Test<span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link waves-light" routerLink="/universities" mdbWavesEffect>Varsities</a> -->
+
 
 
             <!--uncomment the following to see a user icon dropdown, helpful for user authentication-->
-            <!-- <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link">
                     <div class="btn-group" mdbDropdown>
                         <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
                         <div class="dropdown-menu dropdown-menu-right dropdown-primary">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" [routerLink]="['/adminlogin']" routerLinkActive="router-link-active" >Sign in As Admin</a>
+                            <a class="dropdown-item" [routerLink]="['/login']" routerLinkActive="router-link-active">Sign in As Applicant</a>
                             <div class="divider dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
+                            <a class="dropdown-item" href="#">Sign Out</a>
                         </div>
                     </div>
                 </a>
-            </li> -->
+            </li>
 
 
         </ul>
