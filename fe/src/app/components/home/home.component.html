@@ -1,4 +1,4 @@
-<div
+<!-- <div
     style="height: 95vh; background-image: url('../../../assets/images/bg1.jpeg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
     <div class="flex-center flex-column">
         <h2 class="h1-responsive animate__animated animate__bounce">Home page</h2>
@@ -20,4 +20,83 @@
 
         <a href="https://github.com/dylut2000/MDBootstrapAngular9" target="blank" class="mt-5 animate__animated animate__fadeInDown animate__delay-3s">Add a star to this Project in Github</a>
     </div>
-</div>
+</div> -->
+ <!--Intro Section-->
+ <section class="view intro-2">
+    <div class="full-bg-img mask rgba-gradient">
+      <div class="container flex-center">
+        <div class="d-flex align-items-center content-height w-100">
+          <div class="row flex-center pt-5 mt-3 w-100">
+            <div class="col-md-6 text-center text-md-left mb-5">
+              <div class="white-text">
+                <h2 class="h1 h1-responsive font-bold wow fadeInLeft" data-wow-delay="0.3s">WELCOME TO VARSITY FINDER!!! </h2>
+                <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+                <h6 class="wow fadeInLeft" data-wow-delay="0.3s">Welcome to an online platform that will help 
+                  you get the universities that offer your preffered career/the career that you are interested in.</h6>
+                <br>
+                
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-5 offset-xl-1">
+              <!--Form-->
+              <mdb-card class="wow fadeInRight" data-wow-delay="0.3s">
+                <mdb-card-body>
+                        <br><br><br><br>
+                        <div class="container">
+                        <form class="text-center border border-light p-5" action="#!">
+                        
+                            <!-- <p class="h4 mb-4">Sign UP</p> -->
+                            <h3 class="white-text">
+                                    <mdb-icon fas icon="user" class="text-white"></mdb-icon> Register:</h3>
+                        
+                             <!--Enter Email -->
+                             <div>
+                             <mdb-icon fas icon="user" class="text-white active"></mdb-icon>
+                             <input type="text" name="name" class="form-control mb-4" placeholder="name"  
+                             [(ngModel)]= "name">
+                             </div>
+                        
+                           <!--Enter Email -->
+                           <div>
+                                <mdb-icon fas icon="user" class="text-white active"></mdb-icon>
+                           <input type="text" name="lastname" class="form-control mb-4" placeholder="lastname"  
+                           [(ngModel)]= "lastname">
+                           </div>
+                             
+                          
+                        
+                               <!--Enter Email -->
+                             <div>
+                               <mdb-icon fas icon="envelope" class="text-white active"></mdb-icon>
+                              <input type="text" name="email" class="form-control mb-4" placeholder="username"  
+                              [(ngModel)]= "username">
+                             </div>
+                        
+                          
+                            <!-- Enter Password -->
+                            <div>
+                            <mdb-icon fas icon="lock" class="text-white active"></mdb-icon>
+                            <input type="password" name="password" class="form-control mb-4" placeholder="Password"
+                            [(ngModel)]="password">
+                            </div>
+                          
+                          
+                            <!-- Sign in button -->
+                           <button class="btn btn-dark blue-grey btn-block my-4" type="submit"  (click)= "register(name, lastname, username, password)" [routerLink]="['home']">Sign Up</button>
+                          
+                          
+                          </form>
+                        </div>
+                                          </mdb-card-body>
+                                        </mdb-card>
+                                        <!--/.Form-->
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </section>
+                        
+                          
+                       
