@@ -14,6 +14,8 @@ import { TestComponent } from './components/test/test.component';
 import { AdminAddComponent } from './components/admin-add/admin-add.component';
 import { AdminLoginComponent } from './components/AdminLogin/AdminLogin.component';
 import { LoginComponent } from './components/login/login.component';
+import { AdminComponent } from './admin/admin.component';
+import { UniversitiesComponent } from './universities/universities.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { LoginComponent } from './components/login/login.component';
     TestComponent,
     AdminAddComponent,
     AdminLoginComponent,
-    LoginComponent
+    LoginComponent,
+    AdminComponent,
+    UniversitiesComponent
   ],
   imports: [
     BrowserModule,
