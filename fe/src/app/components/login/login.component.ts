@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {USERS} from 'src/app/mock-file';
+import { Router } from "@angular/router";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -7,7 +8,9 @@ import {USERS} from 'src/app/mock-file';
 })
 export class LoginComponent implements OnInit {
   user = USERS;
-  constructor() { }
+  option1: any;
+  option2:any;
+  constructor(private router: Router) {}
   username: String;
   password: String;
   ngOnInit() {
@@ -25,5 +28,12 @@ export class LoginComponent implements OnInit {
       }
       alert("Invalid credentials");
     
+    }
+    togSwitch() {
+      if(this.option1){
+        return this.router.navigate(["login"]);
+      } else if(this.option2){
+        return this.router.navigate(["home"]);
+      }
     }
 }

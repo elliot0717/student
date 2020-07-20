@@ -3,12 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { TestComponent } from './components/test/test.component';
 import{LoginComponent} from './components/login/login.component';
-
+import{AdminLoginComponent} from './components/AdminLogin/AdminLogin.component'
 // this constant default routes to Home, and also send all unknown path to Home
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'test', component: TestComponent },
   {path: 'login', component:LoginComponent},
+  {path:'adminLogin', component:AdminLoginComponent},
  
   // default route
   { path: '', redirectTo: '/home', pathMatch: 'full' },
