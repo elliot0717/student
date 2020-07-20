@@ -1,15 +1,23 @@
-<div
-    style="height: 95vh; background-image: url('../../../assets/images/bg1.jpeg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-    <div class="student">
-        <h2>Admin add</h2>
-        <form action="/action_page.php">
-            <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname"><br><br>
-            <label for="lname">Last name:</label>
-            <input type="text" id="lname" name="lname"><br><br>
-            <input type="submit" value="Submit"><br><br>
-            <input type="button" value="Back" onclick="window.history.back()">
-          </form>
-          
-    </div>
+<br>
+<br>
+
+<div class="div">
+
+    <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">University Name</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Names & Surname">
+        </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Field of Study</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="email@example.com">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+       
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" value="Back" onclick="window.history.back()">Back</button>
+      </form>
 </div>
+
