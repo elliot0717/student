@@ -1,35 +1,28 @@
 import { Component, OnInit } from '@angular/core';
+import { USERS } from './mock-file';
 
-import {USERS} from "src/app/mock-file";
-// uncomment the following import in order to use Lodash
-// import * as _ from 'lodash';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss']
 })
-export class HomeComponent implements OnInit {
-
-
-// uncomment the following import in order to use Lodash
-// import * as _ from 'lodash';
-
-
-//validation
-
+export class RegisterComponent implements OnInit {
   user = USERS;
 
   constructor() { }
+  
   name:String;
   lastname: String;
   username: String;
   password: String;
+  
 
   ngOnInit(): void {
   }
 
-  register(name , lastname ,username, password): void {
+
+    register(name , lastname ,username, password): void {
     for (let i = 0; i < this.user.length; i++) {
       if (
         this.user[i].name === name &&
@@ -42,6 +35,7 @@ export class HomeComponent implements OnInit {
         return;
       }
     }
+    //mrsg
     alert("Invalid credentials");
   
   }
