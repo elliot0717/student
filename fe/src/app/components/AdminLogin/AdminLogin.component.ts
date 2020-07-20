@@ -21,17 +21,11 @@ export class AdminLoginComponent implements OnInit {
         this.user[i].password === password
       ) {
         alert("Successfully logged in");
-        //this.router.navigate(["home-component"]);
+        this.router.navigate(["admin-add"]);
         return;
       }
     }
     alert("Invalid credentials");
   }
-  togSwitch() {
-    if(this.option1){
-      return this.router.navigate(["login"]);
-    } else if(this.option2){
-      return this.router.navigate(["home"]);
-    }
-  }
+
 }

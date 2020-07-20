@@ -11,8 +11,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TestComponent } from './components/test/test.component';
-import {LoginComponent} from './components/login/login.component';
-import {AdminLoginComponent} from './components/AdminLogin/AdminLogin.component'
+import { AdminAddComponent } from './components/admin-add/admin-add.component';
+import { AdminLoginComponent } from './components/AdminLogin/AdminLogin.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +21,9 @@ import {AdminLoginComponent} from './components/AdminLogin/AdminLogin.component'
     HomeComponent,
     NavbarComponent,
     TestComponent,
-    LoginComponent,
-    AdminLoginComponent
+    AdminAddComponent,
+    AdminLoginComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
