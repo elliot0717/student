@@ -12,21 +12,21 @@ import { ClassGetter } from '@angular/compiler/src/output/output_ast';
 })
 export class AdminComponent implements OnInit {
 
-  university :any;
+  university :any = [];
   addForm : any;
    // data type
    id: any;
-   name: any;
+   name: string;
    faculty1: string='';
    faculty2: string='';
    faculty3: string='';
    faculty4: string='';
 
    //function for adding data on the table
-  addModalForm(AddForm, modalAdd){
+  addModalForm(modalAdd){
     console.log(this.name)
     console.log( this.faculty1)
-    //this.university.push({ name: this.name, faculty1: this.faculty1});
+    this.university.push({ name: this.name, faculty1: this.faculty1});
   
   }
 

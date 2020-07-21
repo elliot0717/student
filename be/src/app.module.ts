@@ -8,7 +8,7 @@ import { UsersModule } from  './users/users.module';
 //connection
 @Module({
   imports: [UsersModule,
-    MongooseModule.forRoot('mongodb://localhost:27017/student', {
+    MongooseModule.forRoot('mongodb+srv://elliot96:Madimetsa@.96@cluster0.vthml.mongodb.net/<dbname>?retryWrites=true&w=majority', {
     }),],
   controllers: [AppController],
   providers: [AppService],
