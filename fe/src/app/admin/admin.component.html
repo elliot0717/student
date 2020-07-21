@@ -7,7 +7,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header text-center">
-            <h4 class="modal-title w-100 font-weight-bold text-primary ml-5">Add University Details</h4>
+            <h4 class="modal-title w-100 font-weight-bold text-primary ml-5">Add university details</h4>
 
             <!-- clickable button for hiding the form details -->
             <button type="button" class="close text-primary" (click)="modalAdd.hide()" aria-label="Close">
@@ -23,52 +23,56 @@
                 <label data-error="wrong" data-success="right" for="inputName" >Name</label>
               </div>
 
-              <!-- selector  for selecting a specific model-->
-              <select class="browser-default custom-select" [(ngModel)]="module1">
+             <!-- selector  for selecting a specific model-->
+              <select class="browser-default custom-select" [(ngModel)]="faculty1">
                 <option selected>select faculty</option>
-                <option >Health</option>
-                <option >Science</option>
-                <option >Engineering</option>
+                <option >health</option>
+                <option >science</option>
+                <option >engineering</option>
                 <option >Law</option>
-                <option >Information Technology</option>
+                <option >information technology</option>
               </select>
-                <br>
-                <br>
-              <select class="browser-default custom-select" [(ngModel)]="module2">
+
+              <!-- <br>
+              <br>
+              <select class="browser-default custom-select" [(ngModel)]="faculty2">
                 <option selected>select faculty</option>
-                <option >Health</option>
-                <option >Science</option>
-                <option >Engineering</option>
+                <option >health</option>
+                <option >science</option>
+                <option >engineering</option>
                 <option >Law</option>
-                <option >Information Technology</option>
+                <option >information technology</option>
               </select>
+
               <br>
               <br>
-            <select class="browser-default custom-select" [(ngModel)]="module3">
-              <option selected>select faculty</option>
-              <option >Health</option>
-              <option >Science</option>
-              <option >Engineering</option>
-              <option >Law</option>
-              <option >Information Technology</option>
-            </select>
-            <br>
-            <br>
-          <select class="browser-default custom-select" [(ngModel)]="module4">
-            <option selected>select faculty</option>
-            <option >Health</option>
-            <option >Science</option>
-            <option >Engineering</option>
-            <option >Law</option>
-            <option >Information Technology</option>
-          </select>
+              <select class="browser-default custom-select" [(ngModel)]="faculty3">
+                <option selected>select faculty</option>
+                <option >health</option>
+                <option >science</option>
+                <option >engineering</option>
+                <option >Law</option>
+                <option >information technology</option>
+              </select>
+
+              <br>
+              <br>
+              <select class="browser-default custom-select" [(ngModel)]="faculty4">
+                <option selected>select faculty</option>
+                <option >health</option>
+                <option >science</option>
+                <option >engineering</option>
+                <option >Law</option>
+                <option >information technology</option>
+              </select> -->
+
             </div>
           </div>
 
           <!--button for adding students details on the table  -->
           <div class="modal-footer d-flex justify-content-center buttonAddFormWrapper">
             <button mdbBtn color="primary" outline="true" block="true" class="buttonAdd" data-dismiss="modal"
-              (click)="addModalForm(addForm, modalAdd)" (click)=modalAdd.hide()>Add University
+              (click)="addModalForm(addForm, modalAdd)" (click)=modalAdd.hide()>Add university
               <i class="fas fa-paper-plane-o ml-1"></i>
             </button>
           </div>
@@ -96,7 +100,7 @@
       <tr>
           <th>#</th> 
           <th>Name</th>
-          <th>Faculties</th>
+          <th>faculties</th>
           <th>Actions</th>
       </tr>
   </thead>
@@ -104,10 +108,10 @@
 
   <!--Table body-->
   <tbody>
-      <tr *ngFor="let student of students;">
+      <tr *ngFor="let student of university;">
           <!-- <th scope="row">{{student.id}}</th> -->
-          <td>{{university.name}}</td>
-          <td>{{university.faculties}}</td>
+          <td>{{student.name}}</td>
+          <td>{{student.faculty1}}</td>
           <!-- <th>{{student.Actions}}</th> -->
           <!-- <th>{{student.Actions}}</th> -->
           <td> 
@@ -121,7 +125,7 @@
             </a>
 
             <!-- view -->
-            <a mdbBtn color="success" rounded="true" size="sm" (click)="modalView.show(student)" data-target="#modalView" mdbWavesEffect>
+            <a mdbBtn color="success" rounded="true" size="sm" (click)="modalView.show()" data-target="#modalView" mdbWavesEffect>
               View
               <mdb-icon far icon="eye"></mdb-icon>
             </a>
@@ -148,7 +152,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header text-center">
-          <h4 class="modal-title w-100 font-weight-bold text-primary ml-5">Add University details</h4>
+          <h4 class="modal-title w-100 font-weight-bold text-primary ml-5">Add university details</h4>
 
           <!-- clickable button for hiding the form details -->
           <button type="button" class="close text-primary" (click)="modalEdit.hide()" aria-label="Close">
@@ -165,44 +169,47 @@
             </div>
 
             <!-- selector  for selecting a specific model-->
-            <select class="browser-default custom-select" [(ngModel)]="module1">
+            <select class="browser-default custom-select" [(ngModel)]="faculty1">
               <option selected>select faculty</option>
-              <option >Health</option>
-              <option >Science</option>
-              <option >Engineering</option>
+              <option >health</option>
+              <option >science</option>
+              <option >engineering</option>
               <option >Law</option>
-              <option >Information Technology</option>
+              <option >information technology</option>
             </select>
+            
+            <!-- <br>
+              <br>
+              <select class="browser-default custom-select" [(ngModel)]="faculty2">
+                <option selected>select faculty</option>
+                <option >health</option>
+                <option >science</option>
+                <option >engineering</option>
+                <option >Law</option>
+                <option >information technology</option>
+              </select>
+
               <br>
               <br>
-            <select class="browser-default custom-select" [(ngModel)]="module2">
-              <option selected>select faculty</option>
-              <option >Health</option>
-              <option >Science</option>
-              <option >Engineering</option>
-              <option >Law</option>
-              <option >Information Technology</option>
-            </select>
-            <br>
-            <br>
-          <select class="browser-default custom-select" [(ngModel)]="module3">
-            <option selected>select faculty</option>
-            <option >Health</option>
-            <option >Science</option>
-            <option >Engineering</option>
-            <option >Law</option>
-            <option >Information Technology</option>
-          </select>
-          <br>
-          <br>
-        <select class="browser-default custom-select" [(ngModel)]="module4">
-          <option selected>select faculty</option>
-          <option >Health</option>
-          <option >Science</option>
-          <option >Engineering</option>
-          <option >Law</option>
-          <option >Information Technology</option>
-        </select>
+              <select class="browser-default custom-select" [(ngModel)]="faculty3">
+                <option selected>select faculty</option>
+                <option >health</option>
+                <option >science</option>
+                <option >engineering</option>
+                <option >Law</option>
+                <option >information technology</option>
+              </select>
+
+              <br>
+              <br>
+              <select class="browser-default custom-select" [(ngModel)]="faculty4">
+                <option selected>select faculty</option>
+                <option >health</option>
+                <option >science</option>
+                <option >engineering</option>
+                <option >Law</option>
+                <option >information technology</option>
+              </select> -->
           </div>
         </div>
 
@@ -237,11 +244,11 @@
           <div class="text-center">
             <mdb-icon fas icon="user-graduate"></mdb-icon>
           </div>  
-          <div *ngFor="let student of students;">
+          <div *ngFor="let student of university;">
             <div class="md-form mb-5">
-              <h4>Name:  {{university.name}}</h4>
+              <h4>Name:  {{student.name}}</h4>
             </div>
-            
+
             <div class="md-form mb-5">
               <h4>Module:  {{student.module}}</h4>
             </div>
