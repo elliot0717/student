@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
           this.user[i].password === password
         ) {
           alert("Successfully logged in")
-          this.router.navigate(["universities"]);
+          this.router.navigate(["test"]);
           return;
         }
       }
