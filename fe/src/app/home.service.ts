@@ -10,8 +10,9 @@ export class HomeService {
   constructor(private http: HttpClient) { }
   register(user)
   {
-    
+   
+    console.log(user);
     return this.http.post<any>(this.homeURL, user);
-    console.log('email,password')
+   
   }
 }

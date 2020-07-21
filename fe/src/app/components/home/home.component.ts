@@ -50,6 +50,10 @@ export class HomeComponent implements OnInit {
 
   registerUser()
   {
+
+    this.registerUserData['email']=this.username;
+    this.registerUserData['password']=this.password;
+
     this.sign.register(this.registerUserData)
   .subscribe(
     res => console.log(res),
