@@ -34,6 +34,11 @@ export class UsersService {
   }
 
 
+  async findByemail(email: string): Promise<Users | undefined> {
+    return this.loginModel.findOne({email: email});
+  }
+
+
 }
 
 
