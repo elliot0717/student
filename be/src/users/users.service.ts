@@ -15,6 +15,6 @@ export class UsersService {
     });
     const result = await newUser.save();
     console.log(result);
-    return result.email;
+    return result;
   }
 }
