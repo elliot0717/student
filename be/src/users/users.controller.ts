@@ -1,13 +1,4 @@
-import {
-  Controller,
-  Get,
-  Param,
-  Post,
-  Body,
-  Delete,
-  Put,
-  All,
-} from '@nestjs/common';
+import {Controller,Get,Param,Post,Body,Delete,Put,All} from '@nestjs/common';
 import { UsersService } from './users.service';
 import { Users } from './users.model';
 import { async } from 'rxjs';
