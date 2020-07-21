@@ -10,7 +10,7 @@ import { UsersModule } from  './users/users.module';
 //connection
 @Module({
   imports: [UsersModule,
-    MongooseModule.forRoot('mongodb+srv://sara:Girly@20000720@cluster0.arnb6.mongodb.net/student?retryWrites=true&w=majority', {
+    MongooseModule.forRoot('mongodb+srv://emanuelmahlangu:46636377@cluster0.mfbxs.mongodb.net/test', {
     }),
     AdminModule,
     UniversitiesModule,],
