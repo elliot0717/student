@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {USERS} from 'src/app/mock-file';
 import { Router } from "@angular/router";
+import { LoginService } from 'src/app/login.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,9 +12,11 @@ export class LoginComponent implements OnInit {
   user = USERS;
   option1: any;
   option2:any;
-  constructor(private router: Router) {}
+  constructor(private router: Router, private sign: LoginService) {}
   username: String;
   password: String;
+  loginUserData = {};
+
   ngOnInit() {
   }
   login(username, password): void {
@@ -36,4 +40,13 @@ export class LoginComponent implements OnInit {
         return this.router.navigate(["home"]);
       }
     }
+
+    loginUser()
+    {
+      this.sign.login(this.loginUserData)
+    .subscribe(
+      res => console.log(res),
+      err => console.log(err)
+    )    }
 }
+//sarswgfhj
