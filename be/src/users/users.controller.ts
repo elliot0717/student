@@ -1,6 +1,7 @@
-import { Controller, Get, Param, Post, Body, Delete, Put } from '@nestjs/common';
+import { Controller, Get, Param, Post, Body, Delete, Put, All } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { Users } from './users.model';
+import { async } from 'rxjs';
 ​
 @Controller('users')
 export class UsersController {
@@ -15,6 +16,11 @@ async register(
         userEmail,
         userPassword
     );
- return { id: generatedId }
+ return { id: generatedId , email:userEmail , password:userPassword}
+ }
+
+ @Get('/All')
+ async getAllUsers(){
+     return this.usersService.getUsers();
  }
 }
