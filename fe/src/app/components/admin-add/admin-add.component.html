@@ -1,22 +1,224 @@
-<br>
-<br>
+<!-- container for holding everything -->
+<div class="container">
 
-<div class="div">
+  <!-- modal form for adding student details on a table -->
+   <div class="row d-flex justify-content-center modalWrapper mt-5">
+    <div mdbModal #modalAdd="mdbModal" class="modal fade addNewInputs" id="modalAdd" tabindex="-1" role="dialog"aria-labelledby="modalAdd"aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold text-primary ml-5">Add University Details</h4>
 
-    <form>
-        <div class="form-group">
-          <label for="Inputname">University Name</label>
-          <input type="email" class="form-control" id="Inputname" aria-describedby="emailHelp"
-            placeholder="University Name">
-        </div>
-          <div class="form-group">
-            <label for="inputFaculty">Field of Study</label>
-            <input type="email" class="form-control" id="inputFaculty" aria-describedby="emailHelp"
-              placeholder="Fields of study">
+            <!-- clickable button for hiding the form details -->
+            <button type="button" class="close text-primary" (click)="modalAdd.hide()" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-       
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="submit" class="btn btn-primary" value="Back" onclick="window.history.back()">Back</button>
-      </form>
+
+          <!-- specific body form inputing adding student details on the table  -->
+          <div class="modal-body mx-3">
+            <div >
+              <div class="md-form mb-5">
+                <input type="text" [(ngModel)]="name" id="inputname" class="form-control validate" mdbInput>
+                <label data-error="wrong" data-success="right" for="inputName" >Name</label>
+              </div>
+
+              <div class="md-form mb-5">
+                <input type="text"   [(ngModel)]="email" id="inputPosition" class="form-control validate" mdbInput>
+                <label data-error="wrong" data-success="right" for="inputPosition">email</label>
+              </div> 
+  
+              <div class="md-form mb-5">
+                <input type="text" [(ngModel)]="IDNo" id="inputOfficeInput" class="form-control validate" mdbInput>
+                <label data-error="wrong" data-success="right" for="inputOfficeInput">ID.No</label>
+              </div>
+
+              <!-- selector  for selecting a specific model-->
+              <select class="browser-default custom-select" [(ngModel)]="module">
+                <option selected>select module</option>
+                <option >robotics</option>
+                <option >Applied mathematics</option>
+                <option >software development</option>
+                <option >System analysis</option>
+                <option >C++</option>
+              </select>
+            </div>
+          </div>
+
+          <!--button for adding students details on the table  -->
+          <div class="modal-footer d-flex justify-content-center buttonAddFormWrapper">
+            <button mdbBtn color="primary" outline="true" block="true" class="buttonAdd" data-dismiss="modal"
+              (click)="addModalForm(addForm, modalAdd)" (click)=modalAdd.hide()>Add student
+              <i class="fas fa-paper-plane-o ml-1"></i>
+            </button>
+          </div>
+      </div>
+    </div>
+</div>
+  
+  <!-- add button for displaying the modal form  -->
+    <div class="text-center">
+      <a mdbBtn color="info" rounded="true" size="sm" (click)="modalAdd.show()" data-target="#modalAdd" mdbWavesEffect>
+        Add 
+        <i class="fas fa-plus-square ml-1"></i></a>
+    </div>
+   
+<!-- brakes for braking making space -->
+<br><br><br><br>
+
+
+
+<!-- table -->
+<table class="table table-hover table-fixed">
+
+  <!--Table head-->
+  <thead>
+      <tr>
+          <th>#</th> 
+          <th>Name</th>
+          <th>email</th>
+          <th>ID.No</th>
+          <th>modules</th>
+          <th>Actions</th>
+      </tr>
+  </thead>
+  <!--Table head-->
+
+  <!--Table body-->
+  <tbody>
+      <tr *ngFor="let student of students;">
+          <!-- <th scope="row">{{student.id}}</th> -->
+          <td>{{student.name}}</td>
+          <td>{{student.email}}</td>
+          <td>{{student.IDNo}}</td>
+          <td>{{student.module}}</td>
+          <!-- <th>{{student.Actions}}</th> -->
+          <!-- <th>{{student.Actions}}</th> -->
+          <td> 
+
+
+          <!-- <buttons> -->
+            <!-- Edit -->
+            <a mdbBtn color="warning" rounded="true" size="sm" (click)="modalEdit.show()" data-target="#modalEdit" mdbWavesEffect>
+              Edit
+              <mdb-icon far icon="edit"></mdb-icon>
+            </a>
+
+            <!-- view -->
+            <a mdbBtn color="success" rounded="true" size="sm" (click)="modalView.show(student)" data-target="#modalView" mdbWavesEffect>
+              View
+              <mdb-icon far icon="eye"></mdb-icon>
+            </a>
+            
+            <!-- delete -->
+            <a mdbBtn color="danger" rounded="true" size="sm" (click)="Delete()" data-target="#modalRemove" mdbWavesEffect>
+              Remove
+              <mdb-icon far icon="trash-alt"></mdb-icon>
+            </a>
+          
+          </td>
+      </tr> 
+
+  </tbody>
+  <!--Table body-->
+
+</table>
+<!--Table-->
+
+
+ <!-- edit button on a form -->
+ <div class="row d-flex justify-content-center modalWrapper mt-5">
+  <div mdbModal #modalEdit="mdbModal" class="modal fade addNewInputs" id="modalEdit" tabindex="-1" role="dialog"aria-labelledby="modalEdit"aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 font-weight-bold text-primary ml-5">Add student details</h4>
+
+          <!-- clickable button for hiding the form details -->
+          <button type="button" class="close text-primary" (click)="modalEdit.hide()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <!-- specific body form inputing adding student details on the table  -->
+        <div class="modal-body mx-3">
+          <div >
+            <div class="md-form mb-5">
+              <input type="text" [(ngModel)]="name" id="inputname" class="form-control validate" mdbInput>
+              <label data-error="wrong" data-success="right" for="inputName">Name</label>
+            </div>
+
+            <div class="md-form mb-5">
+              <input type="text"   [(ngModel)]="email" id="inputPosition" class="form-control validate" mdbInput>
+              <label data-error="wrong" data-success="right" for="inputPosition">email</label>
+            </div> 
+
+            <div class="md-form mb-5">
+              <input type="text" [(ngModel)]="IDNo" id="inputOfficeInput" class="form-control validate" mdbInput>
+              <label data-error="wrong" data-success="right" for="inputOfficeInput">ID.No</label>
+            </div>
+
+            <!-- selector  for selecting a specific model-->
+            <select class="browser-default custom-select" [(ngModel)]="module">
+              <option selected>select module</option>
+              <option >robotics</option>
+              <option >Applied mathematics</option>
+              <option >software development</option>
+              <option >System analysis</option>
+              <option >C++</option>
+            </select>
+          </div>
+        </div>
+
+        <!--button for editing students details on the table  -->
+        <div class="modal-footer d-flex justify-content-center buttonAddFormWrapper">
+          <button mdbBtn color="primary" outline="true" block="true" class="buttonEdit" data-dismiss="modal"
+            (click)="EditModalForm(AddForm, modalEdit)" (click)=modalEdit.hide()>save details
+            <i class="fas fa-paper-plane-o ml-1"></i>
+          </button>
+        </div>
+    </div>
+  </div>
 </div>
 
+
+<!-- view form modal -->
+<div class="row d-flex justify-content-center modalWrapper mt-5">
+  <div mdbModal #modalView="mdbModal" class="modal fade addNewInputs" id="modalView" tabindex="-1" role="dialog"aria-labelledby="modalEdit"aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 font-weight-bold text-primary ml-5">Edit student details</h4>
+
+          <!-- clickable button for hiding the form details -->
+          <button type="button" class="close text-primary" (click)="modalView.hide()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+      <!-- specific body form inputing adding student details on the table  -->
+        <div class="modal-body mx-3">
+          <div class="text-center">
+            <mdb-icon fas icon="user-graduate"></mdb-icon>
+          </div>  
+          <div *ngFor="let student of students;">
+            <div class="md-form mb-5">
+              <h4>Name:  {{student.name}}</h4>
+            </div>
+
+            <div class="md-form mb-5">
+              <h4>email:  {{student.email}}</h4>
+            </div> 
+
+            <div class="md-form mb-5">
+              <h4>ID.No:  {{student.IDNo}}</h4>
+            </div>
+
+            <div class="md-form mb-5">
+              <h4>Module:  {{student.module}}</h4>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
