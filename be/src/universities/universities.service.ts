@@ -21,19 +21,19 @@ export class UniversitiesService {
     return result;
   }
 
-  async getUsers(){
-    const users= await this.loginModel.find().exec();
-    return universities;
-  }
+//   async getUsers(){
+//     const users= await this.loginModel.find().exec();
+//     return universities;
+//   }
 
   async findOne(username: string): Promise<Universities | undefined> {
     return this.universities.find(university => university.name === name);
   }
 
 
-  async findByemail(email: string): Promise<Universities | undefined> {
-    return this.universityModel.findOne({name: name});
-  }
+//   async findByemail(email: string): Promise<Universities | undefined> {
+//     return this.universityModel.findOne({name: name});
+//   }
 
 
 }

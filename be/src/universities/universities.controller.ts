@@ -11,10 +11,10 @@ export class UniversitiesController {
     @Post('/login')
   async login(@Body() user) {
    
-    const _user=this.universitiesService.findByemail(user.email);
+    // const _user=this.universitiesService.findByemail(user.email);
  
    
-     return _user;
+    //  return _user;
   }
 
   //register
@@ -30,7 +30,7 @@ export class UniversitiesController {
 
   @Get('/All')
   async getAllUsers() {
-    return this.usersService.getUsers();
+    // return this.usersService.getUsers();
   }
 }
-}
+
