@@ -42,11 +42,11 @@ export class LoginComponent implements OnInit {
     }
 
   loginUser () {
-    //   this.sign.login(this.loginUserData)
-    // .subscribe(
-    //   res => console.log(res),
-    //   err => console.log(err)
-    // ) 
-    console.log("hello")
+      this.sign.login(this.loginUserData)
+    .subscribe(
+      res => console.log(res),
+      err => console.log(err)
+    ) 
+    // console.log("hello")
   }  
 }
