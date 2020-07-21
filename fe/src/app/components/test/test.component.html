@@ -38,7 +38,7 @@
                     content.
                   </mdb-card-text>
               
-                  <a [routerLink]="['/universities']" routerLinkActive="router-link-active"  mdbBtn color="primary" mdbWavesEffect>View varsities</a>
+                  <a [routerLink]="['/medicine']" routerLinkActive="router-link-active"  mdbBtn color="blue-grey" mdbWavesEffect>View varsities</a>
                 </mdb-card-body>
               </mdb-card>
     
@@ -49,7 +49,7 @@
     
             <mdb-card>
                 <!--Card image-->
-                <mdb-card-img src="data:image/jpeg;base64,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" alt="Card image cap"></mdb-card-img>
+                <mdb-card-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQkg54DYW2j3spJf1s8M6VedeB1JRust2fZRg&usqp=CAU" alt="Card image cap"></mdb-card-img>
                 <!--Card content-->
                 <mdb-card-body>
               
@@ -63,7 +63,7 @@
                     content.
                   </mdb-card-text>
               
-                  <a [routerLink]="['/universities']" routerLinkActive="router-link-active"  mdbBtn color="primary" mdbWavesEffect>View varsities</a>
+                  <a [routerLink]="['/law']" routerLinkActive="router-link-active"  mdbBtn color="blue-grey" mdbWavesEffect>View varsities</a>
                 </mdb-card-body>
               </mdb-card>
               <br><br>
@@ -89,7 +89,7 @@
                     content.
                   </mdb-card-text>
               
-                  <a [routerLink]="['/universities']" routerLinkActive="router-link-active"  mdbBtn color="primary" mdbWavesEffect>View varsities</a>
+                  <a [routerLink]="['/engineering']" routerLinkActive="router-link-active"  mdbBtn color="blue-grey" mdbWavesEffect>View varsities</a>
                 </mdb-card-body>
               </mdb-card>
     
@@ -122,7 +122,7 @@
                     content.
                   </mdb-card-text>
               
-                  <a [routerLink]="['/universities']" routerLinkActive="router-link-active"  mdbBtn color="primary" mdbWavesEffect>view varsities</a>
+                  <a [routerLink]="['/sports']" routerLinkActive="router-link-active"  mdbBtn color="blue-grey" mdbWavesEffect>view varsities</a>
                 </mdb-card-body>
               </mdb-card>
     
@@ -147,7 +147,7 @@
                     content.
                   </mdb-card-text>
               
-                  <a [routerLink]="['/universities']" routerLinkActive="router-link-active"  mdbBtn color="primary" mdbWavesEffect>view varsities</a>
+                  <a [routerLink]="['/commerce']" routerLinkActive="router-link-active"  mdbBtn color="blue-grey" mdbWavesEffect>view varsities</a>
                 </mdb-card-body>
               </mdb-card>
     
@@ -172,7 +172,7 @@
                     content.
                   </mdb-card-text>
               
-                  <a [routerLink]="['/universities']" routerLinkActive="router-link-active"  mdbBtn color="primary" mdbWavesEffect>view varsities</a>
+                  <a [routerLink]="['/farming']" routerLinkActive="router-link-active"  mdbBtn color="blue-grey" mdbWavesEffect>view varsities</a>
                 </mdb-card-body>
               </mdb-card>
     
