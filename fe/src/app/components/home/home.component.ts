@@ -1,5 +1,6 @@
-
 import { Component, OnInit } from '@angular/core';
+import { HomeService } from 'src/app/home.service';
+import { Router } from "@angular/router";
 
 import {USERS} from "src/app/mock-files";
 // uncomment the following import in order to use Lodash
@@ -15,17 +16,16 @@ export class HomeComponent implements OnInit {
 
 // uncomment the following import in order to use Lodash
 // import * as _ from 'lodash';
-
-
 //registration validation
 
   user = USERS;
 
-  constructor() { }
+  constructor(private router: Router, private sign: HomeService) {}
   name:String;
   lastname: String;
   username: String;
   password: String;
+  registerUserData = {};
 
   ngOnInit(): void {
   }
@@ -48,5 +48,17 @@ export class HomeComponent implements OnInit {
   
   }
   
+
+  registerUser()
+  {
+
+    this.registerUserData['email']=this.username;
+    this.registerUserData['password']=this.password;
+
+    this.sign.register(this.registerUserData)
+  .subscribe(
+    res => console.log(res),
+    err => console.log(err)
+  )    }
 
 }

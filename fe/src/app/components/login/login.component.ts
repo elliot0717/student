@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   user = USERS;
   option1: any;
   option2:any;
+  
   constructor(private router: Router, private sign: LoginService) {}
   username: String;
   password: String;
@@ -41,7 +42,11 @@ export class LoginComponent implements OnInit {
       }
     }
 
-  loginUser () {
+    loginUser()
+    {
+      this.loginUserData['email']=this.username;
+     this.loginUserData['password']=this.password;
+
       this.sign.login(this.loginUserData)
     .subscribe(
       res => console.log(res),
@@ -51,3 +56,4 @@ export class LoginComponent implements OnInit {
   } 
   
 }
+//sarswgfhj

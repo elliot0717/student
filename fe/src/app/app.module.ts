@@ -16,6 +16,12 @@ import { AdminLoginComponent } from './components/AdminLogin/AdminLogin.componen
 import { LoginComponent } from './components/login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { UniversitiesComponent } from './universities/universities.component';
+import { MedicineComponent } from './medicine/medicine.component';
+import { LawComponent } from './law/law.component';
+import { EngineeringComponent } from './engineering/engineering.component';
+import { SportsComponent } from './sports/sports.component';
+import { CommerceComponent } from './commerce/commerce.component';
+import { FarmingComponent } from './farming/farming.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +33,13 @@ import { UniversitiesComponent } from './universities/universities.component';
     AdminLoginComponent,
     LoginComponent,
     AdminComponent,
-    UniversitiesComponent
+    UniversitiesComponent,
+    MedicineComponent,
+    LawComponent,
+    EngineeringComponent,
+    SportsComponent,
+    CommerceComponent,
+    FarmingComponent
   ],
   imports: [
     BrowserModule,
