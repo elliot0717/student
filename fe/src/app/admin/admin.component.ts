@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+import { ClassGetter } from '@angular/compiler/src/output/output_ast';
 
 
 
@@ -24,8 +25,8 @@ export class AdminComponent implements OnInit {
    //function for adding data on the table
   addModalForm(AddForm, modalAdd){
     console.log(this.name)
-    console.log( [this.faculty1, this.faculty2, this.faculty3, this.faculty4 ]),
-    this.university.push({ name: this.name, faculty1: this.faculty1 , faculty2: this.faculty2 , faculty3: this.faculty3, faculty4: this.faculty4});
+    console.log( this.faculty1)
+    //this.university.push({ name: this.name, faculty1: this.faculty1});
   
   }
 

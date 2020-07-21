@@ -19,12 +19,12 @@
           <div class="modal-body mx-3">
             <div >
               <div class="md-form mb-5">
-                <input type="text" [(ngModel)]="name" id="inputname" class="form-control validate" mdbInput>
+                <input type="text" [(ngModel)]="name" name="name" id="inputname" class="form-control validate" mdbInput>
                 <label data-error="wrong" data-success="right" for="inputName" >Name</label>
               </div>
 
              <!-- selector  for selecting a specific model-->
-              <select class="browser-default custom-select" [(ngModel)]="faculty1">
+              <select class="browser-default custom-select"  name="faculty1"[(ngModel)]="faculty1">
                 <option selected>select faculty</option>
                 <option >health</option>
                 <option >science</option>
@@ -32,6 +32,7 @@
                 <option >Law</option>
                 <option >information technology</option>
               </select>
+
 
               <!-- <br>
               <br>
@@ -72,7 +73,7 @@
           <!--button for adding students details on the table  -->
           <div class="modal-footer d-flex justify-content-center buttonAddFormWrapper">
             <button mdbBtn color="primary" outline="true" block="true" class="buttonAdd" data-dismiss="modal"
-              (click)="addModalForm(addForm, modalAdd)" (click)=modalAdd.hide()>Add university
+              (click)="addModalForm(name)" (click)=modalAdd.hide()>Add university
               <i class="fas fa-paper-plane-o ml-1"></i>
             </button>
           </div>
@@ -216,7 +217,7 @@
         <!--button for editing students details on the table  -->
         <div class="modal-footer d-flex justify-content-center buttonAddFormWrapper">
           <button mdbBtn color="primary" outline="true" block="true" class="buttonEdit" data-dismiss="modal"
-            (click)="EditModalForm(AddForm, modalEdit)" (click)=modalEdit.hide()>save details
+            (click)="EditModalForm(addForm, modalEdit)" (click)=modalEdit.hide()>save details
             <i class="fas fa-paper-plane-o ml-1"></i>
           </button>
         </div>
