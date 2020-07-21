@@ -19,7 +19,8 @@ export class AdminLoginComponent implements OnInit {
       if (
         this.user[i].username === username &&
         this.user[i].password === password
-      ) {
+
+        ) {
         alert("Successfully logged in");
         this.router.navigate(["admin"]);
         return;
@@ -27,5 +28,6 @@ export class AdminLoginComponent implements OnInit {
     }
     alert("Invalid credentials");
   }
+  
 
 }
