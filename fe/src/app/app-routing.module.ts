@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: "adminlogin", component: AdminLoginComponent },
   { path: "admin", component: AdminComponent },
   { path: "universities", component: UniversitiesComponent },
+  { path: "admin-add", component: AdminAddComponent},
 
   // default route
   { path: "", redirectTo: "/home", pathMatch: "full" },
