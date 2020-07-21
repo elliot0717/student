@@ -44,6 +44,9 @@ export class LoginComponent implements OnInit {
 
     loginUser()
     {
+      this.loginUserData['email']=this.username;
+     this.loginUserData['password']=this.password;
+
       this.sign.login(this.loginUserData)
     .subscribe(
       res => console.log(res),
