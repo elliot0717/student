@@ -15,6 +15,8 @@ export class AdminService {
     return this.http.post<any>(this.adminURL, user);
   }
 
-
-
+  deletePost(user)
+  {
+   return this.http.post<any>(`${this.adminURL}`, user);
+  }
 }

@@ -48,7 +48,10 @@ export class AdminComponent implements OnInit {
       .addPosts(this.uniDetailsData)
       .subscribe((res) => console.log(res), (err) => console.log(err));
   }
-  deletePost(){
-    
-  }
+
+  // deletePost() {
+  //   this.adminService.deletePost(this.post_to_delete._id).subscribe((res) => {
+  //     this.getAllPost();
+  //   });
+  // }
 }
