@@ -27,12 +27,18 @@ export class AdminService {
     return universities;
   }
 
-  async findOne(universityName: string): Promise<Admin | undefined> {
+  async findOne(universityName: string, faculty: string): Promise<Admin | undefined> {
     return this.universities.find(
       university => university.universityName === universityName,
     );
   }
-
+  async delete(postID) {
+     await this.adminModel.deleteOne({_id :postID});
+    
+  }
+  async update(post){
+    await this.adminModel.updateOne({universityName:post.universityName},post);
+  }
   //   async findByemail(universityName: string): Promise<Users | undefined> {
   //     return this.loginModel.findOne({email: email});
   //   }
@@ -48,11 +54,6 @@ export class AdminService {
   //     return postUpdate;
   // }
 
-  // async deletePost(studentID)
-  // {
-  //     const deleted_post = await this.adminModel.findByIdAndRemove(studentID);
-  //     return  deleted_post;
-  // }
   // async getAllPosts(): Promise<Admin[]> {
   //     const _posts = await this.adminModel.find().exec();
   //     return _posts;

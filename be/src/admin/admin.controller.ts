@@ -16,10 +16,13 @@ import { async } from 'rxjs';
 @Controller('admin')
 export class AdminController {
   constructor(private readonly adminService: AdminService) {}
-
+  postID: any;
   @Post('/admin')
   async admin(@Body() university) {
-    const _university = this.adminService.findOne(university.universityName);
+    const _university = this.adminService.findOne(
+      university.universityName,
+      university.faculty);
+    
     return _university;
   }
 
@@ -37,23 +40,32 @@ export class AdminController {
     return this.adminService.getUniversity();
   }
 
-  //   @Post()
-  //   async addPost(
-  //       @Body('universityName') univer) {
-  //     console.log(CreatePostDto);
-  //     return this.adminService.createStudent(CreatePostDto);
-  //   }
-
-  //   @Put(':id')
-  //   update(
-  //       @Param('faculty') id: string,
-  //        @Body() update) {
-  //     return `This action updates a #${id} cat`;
-  //   }
-
-  //   @Get('/All')
-  //     async getAllCustomer(@Res() res) {
-  //         const _posts = await this.adminService.getAllPosts();
-  //         return res.status(HttpStatus.OK).json(_posts);
-  //     }
+  @Delete('delete/:postID')
+  async Delete(@Param('postID') postID) {
+     await this.adminService.delete(postID);
+  }
+  @Post('update')
+  async Update(@Body() universityName:any){
+    await this.adminService.update(universityName);
+  }
 }
+
+//   @Post()
+//   async addPost(
+//       @Body('universityName') univer) {
+//     console.log(CreatePostDto);
+//     return this.adminService.createStudent(CreatePostDto);
+//   }
+
+//   @Put(':id')
+//   update(
+//       @Param('faculty') id: string,
+//        @Body() update) {
+//     return `This action updates a #${id} cat`;
+//   }
+
+//   @Get('/All')
+//     async getAllCustomer(@Res() res) {
+//         const _posts = await this.adminService.getAllPosts();
+//         return res.status(HttpStatus.OK).json(_posts);
+//     }
