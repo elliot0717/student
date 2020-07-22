@@ -4,17 +4,13 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class AdminService {
+export class VarsityService {
 
-  private adminURL = "http://localhost:3000/admin";
-
+  private varsityURL = "http://localhost:3000/admin/All";
   constructor(private http: HttpClient) { }
 
-  addPosts(user)
+  university(university)
   {
-    return this.http.post<any>(this.adminURL, user);
+    return this.http.get<any>(this.varsityURL, university);
   }
-
-
-
 }

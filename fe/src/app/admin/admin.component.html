@@ -1,4 +1,8 @@
- <!-- add button for displaying the modal form  -->
+
+
+
+
+<!-- add button for displaying the modal form  -->
  <div class="text-center">
   <a mdbBtn color="info" rounded="true" size="sm" (click)="modalAdd.show()" data-target="#modalAdd" mdbWavesEffect>
     Add
@@ -23,7 +27,7 @@
   <tr *ngFor="let student of university;">
       <!-- <th scope="row">{{student.id}}</th> -->
       <td>{{student.id}}</td>
-      <td>{{student.faculty1}}</td>
+      <td>{{student.faculty}}</td>
       <!-- <th>{{student.Actions}}</th> -->
       <!-- <th>{{student.Actions}}</th> -->
       <td>
@@ -65,11 +69,11 @@
     <div class="modal-body mx-3">
       <div >
         <div class="md-form mb-5">
-          <input type="text" [(ngModel)]="name" id="inputname" class="form-control validate" mdbInput>
+          <input type="text" [(ngModel)]="universityName" id="inputname" class="form-control validate" mdbInput>
           <label data-error="wrong" data-success="right" for="inputName">Name</label>
         </div>
         <!-- selector  for selecting a specific model-->
-        <select class="browser-default custom-select" [(ngModel)]="faculty1">
+        <select class="browser-default custom-select" [(ngModel)]="faculty">
           <option selected>select faculty</option>
           <option >health</option>
           <option >science</option>
@@ -402,11 +406,11 @@
           <div class="modal-body mx-3">
             <div >
               <div class="md-form mb-5">
-                <input type="text" [(ngModel)]="name" id="inputname" class="form-control validate" mdbInput>
+                <input type="text" [(ngModel)]="universityName" id="inputname" class="form-control validate" mdbInput>
                 <label data-error="wrong" data-success="right" for="inputName" >Name</label>
               </div>
              <!-- selector  for selecting a specific model-->
-              <select class="browser-default custom-select" [(ngModel)]="faculty1">
+              <select class="browser-default custom-select" [(ngModel)]="faculty">
                 <option selected>select faculty</option>
                 <option >health</option>
                 <option >science</option>
@@ -457,3 +461,4 @@
     </div>
 </div>
  
+

@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 import { Router } from '@angular/router';
-import {AdminService} from './admin.service'
+import {AdminService} from './admin.service';
+import { VarsityService } from '../varsity.service';
+
+
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -12,24 +15,28 @@ export class AdminComponent implements OnInit {
   addForm : any;
    // data type
    id: any;
-   name: any;
-   faculty1: string='';
+   universityName: any;
+   faculty: string='';
    adminPosts ={};
-   constructor(private router: Router, private sign: AdminService) { }
+   universityData = {};
+
+
+
+   constructor(private router: Router, private sign: AdminService, private varsity : VarsityService) { }
   //  faculty2: string='';
   //  faculty3: string='';
   //  faculty4: string='';
    //function for adding data on the table
   addModalForm(addForm, modalAdd){
-    console.log(this.name)
-    console.log( this.faculty1),
-    this.university.push({ id: this.id, name: this.name, faculty1: this.faculty1});
+    console.log(this.universityName)
+    console.log( this.faculty),
+    this.university.push({ id: this.id, universityName: this.universityName, faculty: this.faculty});
   }
   postsAdded()
   {
-    this.adminPosts['faculty1'] = this.faculty1;
-    this.adminPosts['name']= this.name;
-
+    
+    this.adminPosts['universityName']= this.universityName;
+    this.adminPosts['faculty'] = this.faculty;
     this.sign.addPosts(this.adminPosts)
   .subscribe(
     res => console.log(res),
@@ -55,6 +62,14 @@ export class AdminComponent implements OnInit {
   }
   
   ngOnInit(): void {
+  }
+
+  getUniversity()
+  {
+   this.varsity.university(this.universityData).subscribe(
+     res => console.log(res),
+     err => console.log(err)
+   ) 
   }
 }
 

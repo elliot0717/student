@@ -35,7 +35,8 @@ import { UniversitiesComponent } from './universities/universities.component';
     MDBBootstrapModule.forRoot(),
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
