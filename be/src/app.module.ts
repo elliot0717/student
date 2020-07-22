@@ -3,7 +3,6 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AdminModule } from './admin/admin.module';
-import { UniversitiesModule } from './universities/universities.module';
 import { UsersModule } from  './users/users.module';
 
   
@@ -13,7 +12,7 @@ import { UsersModule } from  './users/users.module';
     MongooseModule.forRoot('mongodb+srv://emanuelmahlangu:46636377@cluster0.mfbxs.mongodb.net/test', {
     }),
     AdminModule,
-    UniversitiesModule,],
+    ],
   controllers: [AppController],
   providers: [AppService],
 })
