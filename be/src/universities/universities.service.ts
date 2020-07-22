@@ -5,20 +5,20 @@ import { Universities} from './universities.model';
 
 @Injectable()
 export class UniversitiesService {
-    universities: any;
+    // universities: any;
 
-  constructor(@InjectModel('User') private readonly loginModel: Model<Universities>) { }
+  // constructor(@InjectModel('User') private readonly loginModel: Model<Universities>) { }
 ​
 
-  async registerUser(name:string, facaulty: string) {
-    const newUser = new this.loginModel({
-      name,
-      facaulty
-    });
+  // async registerUser(name:string, facaulty: string) {
+    // const newUser = new this.loginModel({
+    //   name,
+    //   facaulty
+    // });
 
-    const result = await newUser.save();
-    console.log(result);
-    return result;
+    // const result = await newUser.save();
+    // console.log(result);
+    // return result;
   }
 
 //   async getUsers(){
@@ -26,9 +26,9 @@ export class UniversitiesService {
 //     return universities;
 //   }
 
-  async findOne(username: string): Promise<Universities | undefined> {
-    return this.universities.find(university => university.name === name);
-  }
+  // async findOne(username: string): Promise<Universities | undefined> {
+  //   return this.universities.find(university => university.name === name);
+  // }
 
 
 //   async findByemail(email: string): Promise<Universities | undefined> {
@@ -36,4 +36,4 @@ export class UniversitiesService {
 //   }
 
 
-}
+// }

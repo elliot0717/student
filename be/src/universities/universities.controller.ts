@@ -6,10 +6,10 @@ import { exists } from 'fs';
 
 @Controller('universities')
 export class UniversitiesController {
-    constructor(private readonly  universitiesService:  UniversitiesService) {}
+    // constructor(private readonly  universitiesService:  UniversitiesService) {}
 
-    @Post('/login')
-  async login(@Body() user) {
+    // @Post('/login')
+  // async login(@Body() user) {
    
     // const _user=this.universitiesService.findByemail(user.email);
  
@@ -18,19 +18,19 @@ export class UniversitiesController {
   }
 
   //register
-  @Post()
-  async register(@Body() user) {
-    console.log(user);
-    const generatedId = await this.universitiesService.registerUser(
-      user.name,
-      user.facaulty,
-    );
-    return user;
-  }
+//   @Post()
+//   async register(@Body() user) {
+//     console.log(user);
+//     const generatedId = await this.universitiesService.registerUser(
+//       user.name,
+//       user.facaulty,
+//     );
+//     return user;
+//   }
 
-  @Get('/All')
-  async getAllUsers() {
+//   @Get('/All')
+//   async getAllUsers() {
     // return this.usersService.getUsers();
-  }
-}
+//   }
+// }
 
