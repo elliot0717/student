@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { HomeService } from "src/app/home.service";
+import { HomeService } from "src/app/components/services/home.service";
 import { Router } from "@angular/router";
 
 import { USERS } from "src/app/mock-files";
