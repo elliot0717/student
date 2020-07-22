@@ -44,9 +44,9 @@ export class AdminController {
   async Delete(@Param('postID') postID) {
      await this.adminService.delete(postID);
   }
-  @Post('update')
-  async Update(@Body() universityName:any){
-    await this.adminService.update(universityName);
+  @Put('update')
+  async Update(@Body() post:any){
+    await this.adminService.update(post);
   }
 }
 
