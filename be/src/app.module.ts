@@ -9,9 +9,10 @@ import { UsersModule } from  './users/users.module';
 //connection
 @Module({
   imports: [UsersModule,
-    MongooseModule.forRoot('mongodb+srv://elliot96:Madimetsa@.96@cluster0.vthml.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+    MongooseModule.forRoot('mongodb+srv://emanuelmahlangu:46636377@cluster0.mfbxs.mongodb.net/test', {
     }),
-    AdminModule],
+    AdminModule,
+    ],
   controllers: [AppController],
   providers: [AppService],
 })

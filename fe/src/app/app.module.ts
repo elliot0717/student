@@ -47,7 +47,8 @@ import { FarmingComponent } from './components/farming/farming.component';
     MDBBootstrapModule.forRoot(),
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
