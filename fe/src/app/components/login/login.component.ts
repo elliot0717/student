@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {USERS} from 'src/app/mock-file';
 import { Router } from "@angular/router";
-import { LoginService } from 'src/app/login.service';
+import { LoginService } from 'src/app/components/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
           this.user[i].password === password
         ) {
           alert("Successfully logged in")
-          this.router.navigate(["universities"]);
+          this.router.navigate(["test"]);
           return;
         }
       }
