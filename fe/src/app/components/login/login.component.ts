@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {USERS} from 'src/app/mock-file';
 import { Router } from "@angular/router";
-import { LoginService } from 'src/app/login.service';
+import { LoginService } from 'src/app/components/services/login.service';
 
 @Component({
   selector: 'app-login',

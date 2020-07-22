@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { USERS } from "src/app/mock-file";
 import { Router } from "@angular/router";
+
 @Component({
   selector: "app-AdminLogin",
   templateUrl: "./AdminLogin.component.html",
@@ -10,6 +11,7 @@ export class AdminLoginComponent implements OnInit {
   user = USERS;
   option1 : any;
   option2 : any;
+
   constructor(private router: Router) {}
   username: String;
   password: String;
