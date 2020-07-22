@@ -24,7 +24,7 @@ export class AdminComponent implements OnInit {
   addModalForm(addForm,modalAdd){
     console.log(this.name)
     console.log( this.faculty)
-    this.university.push({ name: this.name, faculty1: this.faculty});
+    this.university.push({ name: this.name, faculty: this.faculty});
   
   }
 

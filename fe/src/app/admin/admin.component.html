@@ -99,7 +99,6 @@
   <!--Table head-->
   <thead>
       <tr>
-          <th>#</th> 
           <th>Name</th>
           <th>faculties</th>
           <th>Actions</th>
@@ -112,7 +111,7 @@
       <tr *ngFor="let student of university;">
           <!-- <th scope="row">{{student.id}}</th> -->
           <td>{{student.name}}</td>
-          <td>{{student.faculty1}}</td>
+          <td>{{student.faculty}}</td>
           <!-- <th>{{student.Actions}}</th> -->
           <!-- <th>{{student.Actions}}</th> -->
           <td> 
@@ -251,7 +250,7 @@
             </div>
 
             <div class="md-form mb-5">
-              <h4>Module:  {{student.module}}</h4>
+              <h4>Module:  {{student.faculty}}</h4>
             </div>
           </div>
         </div>
