@@ -233,6 +233,50 @@
 
 
 
+  <!-- News jumbotron -->
+  <div class="jumbotron text-center hoverable p-4">
+
+    <!-- Grid row -->
+    <div class="row">
+  
+      <!-- Grid column -->
+      <div class="col-md-4 offset-md-1 mx-3 my-3">
+  
+        <!-- Featured image -->
+        <div class="view overlay waves-light" mdbWavesEffect>
+          <img src="data:image/png;base64,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" class="img-fluid" alt="Sample image for first version of blog listing">
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+  
+      </div>
+      <!-- Grid column -->
+  
+      <!-- Grid column -->
+      <div class="col-md-7 text-md-left ml-3 mt-3">
+  
+        <!-- Excerpt -->
+        
+  
+        <h4 class="h4 mb-4">University of  KwaZulu-Natal </h4>
+  
+        <p class="font-weight-normal">The University of KwaZulu-Natal is a university with five campuses in the province 
+          of KwaZulu-Natal in South Africa.It was formed on 1 January 2004 after the merger between the University of Natal
+           and the University of Durban-Westville you can use this link to apply 
+          <a href="http://applications.ukzn.ac.za/">http://applications.ukzn.ac.za/</a> </p>
+        
+  
+      </div>
+      <!-- Grid column -->
+  
+    </div>
+    <!-- Grid row -->
+  
+  </div>
+
+
+
 
 
 

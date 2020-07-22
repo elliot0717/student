@@ -10,8 +10,15 @@ import { UsersModule } from  './users/users.module';
 //connection
 @Module({
   imports: [UsersModule,
+<<<<<<< HEAD
     MongooseModule.forRoot('mongodb://localhost:27017/student', {
     }),],
+=======
+    MongooseModule.forRoot('mongodb+srv://sara:Girly@20000720@cluster0.arnb6.mongodb.net/student?retryWrites=true&w=majority', {
+    }),
+    AdminModule,
+    UniversitiesModule,],
+>>>>>>> 32e31d9a342dc39fa5cede0cb11ed0a37d3cc4e8
   controllers: [AppController],
   providers: [AppService],
 })

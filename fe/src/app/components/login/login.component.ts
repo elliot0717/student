@@ -51,9 +51,7 @@ export class LoginComponent implements OnInit {
     .subscribe(
       res => console.log(res),
       err => console.log(err)
-    ) 
-    
-  } 
-  
+    )
+    return this.router.navigate(["test"]);    }
 }
 //sarswgfhj
