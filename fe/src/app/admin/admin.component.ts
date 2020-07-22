@@ -14,19 +14,17 @@ export class AdminComponent implements OnInit {
 
   university :any = [];
   addForm : any;
+  modalAdd : any;
    // data type
    id: any;
    name: string;
-   faculty1: string='';
-   faculty2: string='';
-   faculty3: string='';
-   faculty4: string='';
+   faculty: string='';
 
    //function for adding data on the table
-  addModalForm(modalAdd){
+  addModalForm(addForm,modalAdd){
     console.log(this.name)
-    console.log( this.faculty1)
-    this.university.push({ name: this.name, faculty1: this.faculty1});
+    console.log( this.faculty)
+    this.university.push({ name: this.name, faculty1: this.faculty});
   
   }
 
