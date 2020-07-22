@@ -49,6 +49,7 @@ export class AdminComponent implements OnInit {
         // swal(" Your imaginary Details has been deleted!", {
         //   icon: "success",
         // });
+        this.university.pop({ name: this.name, faculty: this.faculty});
   }
 
  
