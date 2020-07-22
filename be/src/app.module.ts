@@ -3,15 +3,16 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AdminModule } from './admin/admin.module';
-import { UniversitiesModule } from './universities/universities.module';
 import { UsersModule } from  './users/users.module';
 
   
 //connection
 @Module({
   imports: [UsersModule,
-    MongooseModule.forRoot('mongodb://localhost:27017/student', {
-    }),],
+    MongooseModule.forRoot('mongodb+srv://emanuelmahlangu:46636377@cluster0.mfbxs.mongodb.net/test', {
+    }),
+    AdminModule,
+    ],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -5,14 +5,14 @@ import { TestComponent } from "./components/test/test.component";
 import { AdminAddComponent } from "./components/admin-add/admin-add.component";
 import { LoginComponent } from "./components/login/login.component";
 import { AdminLoginComponent } from "./components/AdminLogin/AdminLogin.component";
-import { AdminComponent } from "./admin/admin.component";
-import { UniversitiesComponent } from "./universities/universities.component";
-import { EngineeringComponent } from './engineering/engineering.component';
-import { FarmingComponent } from './farming/farming.component';
-import { LawComponent } from './law/law.component';
-import { MedicineComponent } from './medicine/medicine.component';
-import { SportsComponent } from './sports/sports.component';
-import { CommerceComponent } from './commerce/commerce.component';
+import { AdminComponent } from "./components/admin/admin.component";
+import { UniversitiesComponent } from "./components/universities/universities.component";
+import { EngineeringComponent } from './components/engineering/engineering.component';
+import { FarmingComponent } from './components/farming/farming.component';
+import { LawComponent } from './components/law/law.component';
+import { MedicineComponent } from './components/medicine/medicine.component';
+import { SportsComponent } from './components/sports/sports.component';
+import { CommerceComponent } from './components/commerce/commerce.component';
 
 // this constant default routes to Home, and also send all unknown path to Home
 const routes: Routes = [
@@ -29,6 +29,7 @@ const routes: Routes = [
   { path: "sports", component: SportsComponent },
   { path: "commerce", component: CommerceComponent },
   { path: "universities", component: UniversitiesComponent },
+  { path: "admin-add", component: AdminAddComponent},
 
   // default route
   { path: "", redirectTo: "/home", pathMatch: "full" },

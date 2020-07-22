@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Careers } from '../models/careers.model';
+import { Careers } from 'src/app/models/careers.model';
+
 
 
 @Component({

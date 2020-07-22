@@ -1,0 +1,259 @@
+<!-- container for holding everything -->
+<div class="container">
+
+  <!-- modal form for adding student details on a table -->
+   <div class="row d-flex justify-content-center modalWrapper mt-5">
+    <div mdbModal #modalAdd="mdbModal" class="modal fade addNewInputs" id="modalAdd" tabindex="-1" role="dialog"aria-labelledby="modalAdd"aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold text-blue-grey ml-5">Add vasity details</h4>
+
+            <!-- clickable button for hiding the form details -->
+            <button type="button" class="close text-primary" (click)="modalAdd.hide()" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <!-- specific body form inputing adding student details on the table  -->
+          <div class="modal-body mx-3">
+            <div >
+              <div class="md-form mb-5">
+                <input type="text" [(ngModel)]="name" name="name" id="inputname" class="form-control validate" mdbInput>
+                <label data-error="wrong" data-success="right" for="inputName" >Name</label>
+              </div>
+
+             <!-- selector  for selecting a specific model-->
+              <select class="browser-default custom-select"  name="faculty1"[(ngModel)]="faculty">
+                <option selected>select faculty</option>
+                <option >health</option>
+                <option >science</option>
+                <option >engineering</option>
+                <option >Law</option>
+                <option >information technology</option>
+              </select>
+
+
+              <!-- <br>
+              <br>
+              <select class="browser-default custom-select" [(ngModel)]="faculty2">
+                <option selected>select faculty</option>
+                <option >health</option>
+                <option >science</option>
+                <option >engineering</option>
+                <option >Law</option>
+                <option >information technology</option>
+              </select>
+
+              <br>
+              <br>
+              <select class="browser-default custom-select" [(ngModel)]="faculty3">
+                <option selected>select faculty</option>
+                <option >health</option>
+                <option >science</option>
+                <option >engineering</option>
+                <option >Law</option>
+                <option >information technology</option>
+              </select>
+
+              <br>
+              <br>
+              <select class="browser-default custom-select" [(ngModel)]="faculty4">
+                <option selected>select faculty</option>
+                <option >health</option>
+                <option >science</option>
+                <option >engineering</option>
+                <option >Law</option>
+                <option >information technology</option>
+              </select> -->
+
+            </div>
+          </div>
+
+          <!--button for adding students details on the table  -->
+          <div class="modal-footer d-flex justify-content-center buttonAddFormWrapper">
+            <button mdbBtn color="blue-grey" outline="true" block="true" class="buttonAdd" data-dismiss="modal"
+              (click)="addModalForm(addForm, modalAdd)" (click)=modalAdd.hide()>Add vasity
+              <i class="fas fa-paper-plane-o ml-1"></i>
+            </button>
+          </div>
+      </div>
+    </div>
+</div>
+  
+  <!-- add button for displaying the modal form  -->
+    <div class="text-center">
+      <a mdbBtn color="blue-grey" rounded="true" size="sm" (click)="modalAdd.show()" data-target="#modalAdd" mdbWavesEffect>
+        Add 
+        <i class="fas fa-plus-square ml-1"></i></a>
+    </div>
+   
+<!-- brakes for braking making space -->
+<br><br><br><br>
+
+
+
+<!-- table -->
+<table class="table table-hover table-fixed">
+
+  <!--Table head-->
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th>faculties</th>
+          <th>Actions</th>
+      </tr>
+  </thead>
+  <!--Table head-->
+
+  <!--Table body-->
+  <tbody>
+      <tr *ngFor="let student of university;">
+          <!-- <th scope="row">{{student.id}}</th> -->
+          <td>{{student.name}}</td>
+          <td>{{student.faculty}}</td>
+          <!-- <th>{{student.Actions}}</th> -->
+          <!-- <th>{{student.Actions}}</th> -->
+          <td> 
+
+
+          <!-- <buttons> -->
+            <!-- Edit -->
+            <a mdbBtn color="warning" rounded="true" size="sm" (click)="modalEdit.show()" data-target="#modalEdit" mdbWavesEffect>
+              Edit
+              <mdb-icon far icon="edit"></mdb-icon>
+            </a>
+
+            <!-- view -->
+            <a mdbBtn color="success" rounded="true" size="sm" (click)="modalView.show()" data-target="#modalView" mdbWavesEffect>
+              View
+              <mdb-icon far icon="eye"></mdb-icon>
+            </a>
+            
+            <!-- delete -->
+            <a mdbBtn color="danger" rounded="true" size="sm" (click)="Delete()" data-target="#modalRemove" mdbWavesEffect>
+              Remove
+              <mdb-icon far icon="trash-alt"></mdb-icon>
+            </a>
+          
+          </td>
+      </tr> 
+
+  </tbody>
+  <!--Table body-->
+
+</table>
+<!--Table-->
+
+
+ <!-- edit button on a form -->
+ <div class="row d-flex justify-content-center modalWrapper mt-5">
+  <div mdbModal #modalEdit="mdbModal" class="modal fade addNewInputs" id="modalEdit" tabindex="-1" role="dialog"aria-labelledby="modalEdit"aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 font-weight-bold text-primary ml-5">Add university details</h4>
+
+          <!-- clickable button for hiding the form details -->
+          <button type="button" class="close text-primary" (click)="modalEdit.hide()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <!-- specific body form inputing adding student details on the table  -->
+        <div class="modal-body mx-3">
+          <div >
+            <div class="md-form mb-5">
+              <input type="text" [(ngModel)]="name" id="inputname" class="form-control validate" mdbInput>
+              <label data-error="wrong" data-success="right" for="inputName">Name</label>
+            </div>
+
+            <!-- selector  for selecting a specific model-->
+            <select class="browser-default custom-select" [(ngModel)]="faculty">
+              <option selected>select faculty</option>
+              <option >health</option>
+              <option >science</option>
+              <option >engineering</option>
+              <option >Law</option>
+              <option >information technology</option>
+            </select>
+            
+            <!-- <br>
+              <br>
+              <select class="browser-default custom-select" [(ngModel)]="faculty2">
+                <option selected>select faculty</option>
+                <option >health</option>
+                <option >science</option>
+                <option >engineering</option>
+                <option >Law</option>
+                <option >information technology</option>
+              </select>
+
+              <br>
+              <br>
+              <select class="browser-default custom-select" [(ngModel)]="faculty3">
+                <option selected>select faculty</option>
+                <option >health</option>
+                <option >science</option>
+                <option >engineering</option>
+                <option >Law</option>
+                <option >information technology</option>
+              </select>
+
+              <br>
+              <br>
+              <select class="browser-default custom-select" [(ngModel)]="faculty4">
+                <option selected>select faculty</option>
+                <option >health</option>
+                <option >science</option>
+                <option >engineering</option>
+                <option >Law</option>
+                <option >information technology</option>
+              </select> -->
+          </div>
+        </div>
+
+        <!--button for editing students details on the table  -->
+        <div class="modal-footer d-flex justify-content-center buttonAddFormWrapper">
+          <button mdbBtn color="primary" outline="true" block="true" class="buttonEdit" data-dismiss="modal"
+            (click)="EditModalForm(addForm, modalEdit)" (click)=modalEdit.hide()>save details
+            <i class="fas fa-paper-plane-o ml-1"></i>
+          </button>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- view form modal -->
+<div class="row d-flex justify-content-center modalWrapper mt-5">
+  <div mdbModal #modalView="mdbModal" class="modal fade addNewInputs" id="modalView" tabindex="-1" role="dialog"aria-labelledby="modalEdit"aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 font-weight-bold text-primary ml-5">Edit university details</h4>
+
+          <!-- clickable button for hiding the form details -->
+          <button type="button" class="close text-primary" (click)="modalView.hide()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+      <!-- specific body form inputing adding student details on the table  -->
+        <div class="modal-body mx-3">
+          <div class="text-center">
+            <mdb-icon fas icon="user-graduate"></mdb-icon>
+          </div>  
+          <div *ngFor="let student of university;">
+            <div class="md-form mb-5">
+              <h4>Name:  {{student.name}}</h4>
+            </div>
+
+            <div class="md-form mb-5">
+              <h4>Module:  {{student.faculty}}</h4>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
