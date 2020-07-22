@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { HomeService } from "src/app/components/services/home.service";
 import { Router } from "@angular/router";
 
-import { USERS } from "src/app/mock-files";
+import {USERS} from "src/app/mock-files";
 // uncomment the following import in order to use Lodash
 // import * as _ from 'lodash';
 
@@ -12,9 +12,11 @@ import { USERS } from "src/app/mock-files";
   styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
-  // uncomment the following import in order to use Lodash
-  // import * as _ from 'lodash';
-  //registration validation
+
+
+// uncomment the following import in order to use Lodash
+// import * as _ from 'lodash';
+//registration validation
 
   user = USERS;
 
@@ -43,6 +45,8 @@ export class HomeComponent implements OnInit {
     //error message
     alert("Invalid credentials");
   }
+  
+
 
   registerUser() {
     this.registerUserData["email"] = this.username;
