@@ -33,23 +33,15 @@ export class AdminComponent implements OnInit {
 
   //function for edditing data on the table
   EditModalForm(EditForm, modalEdit){
-    //console.log( this.id , this.name , this.email, this.IDNo, this.faculty1 ),
-   // this.university.fill({ name:this.name, email:this.email , IDNo:this.IDNo  , module:this.faculty1})
-    // swal(" Your imaginary Details has been edited!", {
-    //   icon: "success",
-    // });
+    console.log(this.name)
+    console.log( this.faculty)
+    this.university.fill({ name: this.name, faculty: this.faculty})
+
   }
 
   Delete(){
     console.log("Deleted")
-    // console.log( [this.id , this.name , this.email, this.IDNo, this.module ]),
-     //this.university.pop({id: this.id , name:this.name, email:this.email , IDNo:this.IDNo  , module:this.faculty1})
-    // this.students.pop=[{name: this.name, email: this.email , IDNo: this.IDNo  , module: this.module}]
-    // this.students = [{name: this.name, email: this.email , IDNo: this.IDNo  , module: this.module}]
-        // swal(" Your imaginary Details has been deleted!", {
-        //   icon: "success",
-        // });
-        this.university.pop({ name: this.name, faculty: this.faculty});
+    this.university.pop({ name: this.name, faculty: this.faculty});
   }
 
  
