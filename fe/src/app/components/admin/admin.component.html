@@ -73,7 +73,7 @@
           <!--button for adding students details on the table  -->
           <div class="modal-footer d-flex justify-content-center buttonAddFormWrapper">
             <button mdbBtn color="blue-grey" outline="true" block="true" class="buttonAdd" data-dismiss="modal"
-              (click)="addModalForm(addForm, modalAdd)" (click)="addPost()" (click)=modalAdd.hide()>Add vasity
+              (click)="addModalForm(addForm, modalAdd)" (click)="addPost()" (click)="getUniversity()"(click)=modalAdd.hide()>Add vasity
               <i class="fas fa-paper-plane-o ml-1"></i>
             </button>
           </div>
@@ -108,10 +108,10 @@
 
   <!--Table body-->
   <tbody>
-      <tr *ngFor="let student of university;">
+      <tr *ngFor="let admin of backEndData;">
           <!-- <th scope="row">{{student.id}}</th> -->
-          <td>{{student.name}}</td>
-          <td>{{student.faculty}}</td>
+          <td>{{admin.universityName}}</td>
+          <td>{{admin.faculty}}</td>
           <!-- <th>{{student.Actions}}</th> -->
           <!-- <th>{{student.Actions}}</th> -->
           <td> 
